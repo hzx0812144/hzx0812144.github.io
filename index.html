@@ -15,7 +15,29 @@ body{
 </body>
 </html>
 
-let name = prompt('请输入你的名字：');
-if(name){
-    alert('你好，'+name);
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>输入弹窗演示</title>
+</head>
+<body>
+<script>
+// 弹出输入框
+let text = prompt("请输入名字：");
+
+// 判断用户有没有输入
+if (text !== null) {
+    if (text.trim() === "") {
+        alert("你没有输入任何文字！");
+    } else {
+        alert("你输入的内容：" + text);
+    }
+} else {
+    // 用户点击【取消】
+    alert("你点击了取消");
 }
+</script>
+</body>
+</html>
+
